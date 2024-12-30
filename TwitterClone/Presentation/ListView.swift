@@ -13,8 +13,8 @@ struct ListView: View {
     var body: some View {
         VStack {
             // リスト一覧
-            List(viewModel.fruits) { fruit in
-                Text(fruit.name)
+            List(viewModel.tasks) { task in
+                Text(task.title)
             }
             .listStyle(.inset)
             

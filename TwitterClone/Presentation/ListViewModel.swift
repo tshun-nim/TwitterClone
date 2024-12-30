@@ -10,11 +10,5 @@ import Foundation
 class ListViewModel: ObservableObject {
     @Published var showModal: Bool = false
     @Published var editText: String = ""
-    @Published var fruits = [
-        Fruit(name: "りんご"),
-        Fruit(name: "オレンジ"),
-        Fruit(name: "レモン"),
-        Fruit(name: "いちご"),
-        Fruit(name: "キウイ")
-    ]
+    @Published var tasks: [TaskEntity] = []
 }

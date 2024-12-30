@@ -26,14 +26,14 @@ struct AddListView: View {
                 .buttonStyle(.bordered)
                 Spacer()
                 Button(action: {
-                    let val = Fruit(name: viewModel.editText)
-//                        viewModel.editText = ""
+                    let val = TaskEntity(title: viewModel.editText)
+                    
                     if !viewModel.editText.isEmpty {
                         Task { @MainActor in
                             viewModel.editText = ""
                         }
                     }
-                    viewModel.fruits.append(val)
+                    viewModel.tasks.append(val)
                     viewModel.showModal = false
                 }) {
                     Text("追加")
